@@ -28,7 +28,7 @@ export const postsSlice = createSlice({
             state.items = state.items.filter((item) => item.id !== action.payload)
         },
         updatedPost: function (state, action) {
-            state.items.map((item) => {
+            state.items.map(item => {
                 if (item.id === action.payload.id) {
                     item.title = action.payload.title;
                     item.content = action.payload.content;
